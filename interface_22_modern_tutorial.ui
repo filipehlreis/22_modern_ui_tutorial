@@ -704,7 +704,7 @@ border-radius: 10px;
               <number>0</number>
              </property>
              <item>
-              <widget class="QPushButton" name="pushButton_2">
+              <widget class="QPushButton" name="minimizeBtn">
                <property name="toolTip">
                 <string>Minimize Window</string>
                </property>
@@ -718,7 +718,7 @@ border-radius: 10px;
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_3">
+              <widget class="QPushButton" name="restoreBtn">
                <property name="toolTip">
                 <string>Restore Window</string>
                </property>
@@ -732,7 +732,7 @@ border-radius: 10px;
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="pushButton_4">
+              <widget class="QPushButton" name="closeBtn">
                <property name="toolTip">
                 <string>Close Window</string>
                </property>
@@ -1052,6 +1052,21 @@ border-radius: 10px;
        <item>
         <widget class="QWidget" name="footerContainer" native="true">
          <layout class="QHBoxLayout" name="horizontalLayout_11">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
           <item>
            <widget class="QFrame" name="frame_10">
             <property name="frameShape">
@@ -1075,14 +1090,14 @@ border-radius: 10px;
            <widget class="QFrame" name="sizeGrip">
             <property name="minimumSize">
              <size>
-              <width>10</width>
-              <height>10</height>
+              <width>30</width>
+              <height>30</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
-              <width>10</width>
-              <height>10</height>
+              <width>30</width>
+              <height>30</height>
              </size>
             </property>
             <property name="frameShape">

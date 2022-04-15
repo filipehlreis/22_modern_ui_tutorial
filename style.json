@@ -1,0 +1,26 @@
+{
+	"QMainWindow":[
+		{
+			"tittle":"CONSTRUCTION APP",
+			"icon":":/images/assets/logo_construction.png",
+			"frameless": true,
+			"transluscentBg": true,
+			"sizeGrip": "sizeGrip",
+			"navigation":[
+				{
+					"minimize":"minimizeBtn",
+					"close": "closeBtn",
+					"restore":[
+						{	
+							"buttonName": "restoreBtn",
+							"normalIcon": ":/icons/icons/feather-WHITE/square.svg",
+							"maximizedIcon": ":/icons/icons/feather-WHITE/copy.svg"
+						}
+					],
+					"moveWindow": "headerContainer",
+					"tittleBar": "headerContainer"
+				}
+			]
+		}
+	]
+}
