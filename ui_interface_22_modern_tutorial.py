@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interface_22_modern_tutorialyaPkOr.ui'
+## Form generated from reading UI file 'interface_22_modern_tutorialffglJw.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -215,14 +215,14 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_4.addWidget(self.label)
 
-        self.pushButton = QPushButton(self.frame_6)
-        self.pushButton.setObjectName(u"pushButton")
+        self.closeCenterMenuBtn = QPushButton(self.frame_6)
+        self.closeCenterMenuBtn.setObjectName(u"closeCenterMenuBtn")
         icon7 = QIcon()
         icon7.addFile(u":/icons/icons/feather-WHITE/x-circle.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton.setIcon(icon7)
-        self.pushButton.setIconSize(QSize(24, 24))
+        self.closeCenterMenuBtn.setIcon(icon7)
+        self.closeCenterMenuBtn.setIconSize(QSize(24, 24))
 
-        self.horizontalLayout_4.addWidget(self.pushButton, 0, Qt.AlignRight)
+        self.horizontalLayout_4.addWidget(self.closeCenterMenuBtn, 0, Qt.AlignRight)
 
 
         self.verticalLayout_6.addWidget(self.frame_6, 0, Qt.AlignTop)
@@ -649,9 +649,9 @@ class Ui_MainWindow(object):
         self.helpBtn.setText(QCoreApplication.translate("MainWindow", u"Help", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"More Menu", None))
 #if QT_CONFIG(tooltip)
-        self.pushButton.setToolTip(QCoreApplication.translate("MainWindow", u"Close Menu", None))
+        self.closeCenterMenuBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close Menu", None))
 #endif // QT_CONFIG(tooltip)
-        self.pushButton.setText("")
+        self.closeCenterMenuBtn.setText("")
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Settings", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"Information", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Help", None))

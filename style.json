@@ -23,30 +23,51 @@
 			]
 		}
 	],
-    "QCustomSlideMenu": [{
-		"name": "leftMenuContainer",
-		"defaultSize": [{
-			"width": 45,
-			"height": "parent"
-		}],
-		"collapsedSize": [{
-			"width": 45,
-			"height": "parent"
-		}],
-		"expandedSize": [{
-			"width": 123,
-			"height": "parent"
-		}],
-		"toggleButton": [{
-			"buttonName": "menuBtn",
-			"icons": [{
-				"whenMenuIsCollapsed": ":/icons/icons/feather-WHITE/align-justify.svg",
-				"whenMenuIsExpanded": ":/icons/icons/feather-WHITE/chevron-left.svg"
-			}]
-		}],
-		"menuTransitionAnimation": [{
-			"animationDuration": 300,
-			"animationEasingCurve": "Linear"
-		}]
-	}]
+    "QCustomSlideMenu": [
+        {
+            "name": "leftMenuContainer",
+            "defaultSize": [{
+                "width": 45,
+                "height": "parent"
+            }],
+            "collapsedSize": [{
+                "width": 45,
+                "height": "parent"
+            }],
+            "expandedSize": [{
+                "width": 123,
+                "height": "parent"
+            }],
+            "toggleButton": [{
+                "buttonName": "menuBtn",
+                "icons": [{
+                    "whenMenuIsCollapsed": ":/icons/icons/feather-WHITE/align-justify.svg",
+                    "whenMenuIsExpanded": ":/icons/icons/feather-WHITE/chevron-left.svg"
+                }]
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 150,
+                "animationEasingCurve": "Linear"
+            }]
+	    },
+        {
+            "name": "centerMenuContainer",
+            "defaultSize": [{
+                "width": 0,
+                "height": "parent"
+            }],
+            "collapsedSize": [{
+                "width": 0,
+                "height": "parent"
+            }],
+            "expandedSize": [{
+                "width": 200,
+                "height": "parent"
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 150,
+                "animationEasingCurve": "Linear"
+            }]
+	    }
+    ]
 }

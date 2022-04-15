@@ -44,6 +44,14 @@ class MainWindow(QMainWindow):
         # ################################################################### #
         self.show()
 
+        # EXPAND CENTER MENU WIDGET SIZE
+        self.ui.settingsBtn.clicked.connect(lambda: self.ui.centerMenuContainer.expandMenu())
+        self.ui.infoBtn.clicked.connect(lambda: self.ui.centerMenuContainer.expandMenu())
+        self.ui.helpBtn.clicked.connect(lambda: self.ui.centerMenuContainer.expandMenu())
+
+        # CLOSE CENTER MENU WIDGET SIZE
+        self.ui.closeCenterMenuBtn.clicked.connect(lambda: self.ui.centerMenuContainer.collapseMenu())
+
 
 # ########################################################################### #
 # execute app
