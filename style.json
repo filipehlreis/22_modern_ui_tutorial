@@ -68,6 +68,25 @@
                 "animationDuration": 150,
                 "animationEasingCurve": "Linear"
             }]
+	    },
+        {
+            "name": "rightMenuContainer",
+            "defaultSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "collapsedSize": [{
+                "width": 0,
+                "height": "auto"
+            }],
+            "expandedSize": [{
+                "width": 200,
+                "height": "auto"
+            }],
+            "menuTransitionAnimation": [{
+                "animationDuration": 150,
+                "animationEasingCurve": "Linear"
+            }]
 	    }
     ]
 }

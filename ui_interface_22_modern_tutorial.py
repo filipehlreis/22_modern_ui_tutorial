@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interface_22_modern_tutorialffglJw.ui'
+## Form generated from reading UI file 'interface_22_modern_tutoriallzlhgA.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -330,23 +330,32 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6 = QHBoxLayout(self.frame_5)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
-        self.pushButton_6 = QPushButton(self.frame_5)
-        self.pushButton_6.setObjectName(u"pushButton_6")
+        self.notificationBtn = QPushButton(self.frame_5)
+        self.notificationBtn.setObjectName(u"notificationBtn")
         icon8 = QIcon()
-        icon8.addFile(u":/icons/icons/feather-WHITE/more-horizontal.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_6.setIcon(icon8)
-        self.pushButton_6.setIconSize(QSize(24, 24))
+        icon8.addFile(u":/icons/icons/feather-WHITE/bell.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.notificationBtn.setIcon(icon8)
+        self.notificationBtn.setIconSize(QSize(24, 24))
 
-        self.horizontalLayout_6.addWidget(self.pushButton_6)
+        self.horizontalLayout_6.addWidget(self.notificationBtn)
 
-        self.pushButton_5 = QPushButton(self.frame_5)
-        self.pushButton_5.setObjectName(u"pushButton_5")
+        self.moreMenuBtn = QPushButton(self.frame_5)
+        self.moreMenuBtn.setObjectName(u"moreMenuBtn")
         icon9 = QIcon()
-        icon9.addFile(u":/icons/icons/feather-WHITE/user.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_5.setIcon(icon9)
-        self.pushButton_5.setIconSize(QSize(24, 24))
+        icon9.addFile(u":/icons/icons/feather-WHITE/more-horizontal.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.moreMenuBtn.setIcon(icon9)
+        self.moreMenuBtn.setIconSize(QSize(24, 24))
 
-        self.horizontalLayout_6.addWidget(self.pushButton_5)
+        self.horizontalLayout_6.addWidget(self.moreMenuBtn)
+
+        self.profileMenuBtn = QPushButton(self.frame_5)
+        self.profileMenuBtn.setObjectName(u"profileMenuBtn")
+        icon10 = QIcon()
+        icon10.addFile(u":/icons/icons/feather-WHITE/user.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.profileMenuBtn.setIcon(icon10)
+        self.profileMenuBtn.setIconSize(QSize(24, 24))
+
+        self.horizontalLayout_6.addWidget(self.profileMenuBtn)
 
 
         self.horizontalLayout_5.addWidget(self.frame_5, 0, Qt.AlignHCenter)
@@ -360,25 +369,25 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.minimizeBtn = QPushButton(self.frame_7)
         self.minimizeBtn.setObjectName(u"minimizeBtn")
-        icon10 = QIcon()
-        icon10.addFile(u":/icons/icons/feather-WHITE/minus.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.minimizeBtn.setIcon(icon10)
+        icon11 = QIcon()
+        icon11.addFile(u":/icons/icons/feather-WHITE/minus.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.minimizeBtn.setIcon(icon11)
 
         self.horizontalLayout_3.addWidget(self.minimizeBtn)
 
         self.restoreBtn = QPushButton(self.frame_7)
         self.restoreBtn.setObjectName(u"restoreBtn")
-        icon11 = QIcon()
-        icon11.addFile(u":/icons/icons/feather-WHITE/square.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.restoreBtn.setIcon(icon11)
+        icon12 = QIcon()
+        icon12.addFile(u":/icons/icons/feather-WHITE/square.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.restoreBtn.setIcon(icon12)
 
         self.horizontalLayout_3.addWidget(self.restoreBtn)
 
         self.closeBtn = QPushButton(self.frame_7)
         self.closeBtn.setObjectName(u"closeBtn")
-        icon12 = QIcon()
-        icon12.addFile(u":/icons/icons/feather-WHITE/x.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.closeBtn.setIcon(icon12)
+        icon13 = QIcon()
+        icon13.addFile(u":/icons/icons/feather-WHITE/x.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.closeBtn.setIcon(icon13)
 
         self.horizontalLayout_3.addWidget(self.closeBtn)
 
@@ -395,6 +404,7 @@ class Ui_MainWindow(object):
         sizePolicy2.setVerticalStretch(0)
         sizePolicy2.setHeightForWidth(self.mainBodyContent.sizePolicy().hasHeightForWidth())
         self.mainBodyContent.setSizePolicy(sizePolicy2)
+        self.mainBodyContent.setMinimumSize(QSize(500, 419))
         self.horizontalLayout_8 = QHBoxLayout(self.mainBodyContent)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.mainContentsContainer = QWidget(self.mainBodyContent)
@@ -448,6 +458,7 @@ class Ui_MainWindow(object):
         self.rightMenuContainer = QCustomSlideMenu(self.mainBodyContent)
         self.rightMenuContainer.setObjectName(u"rightMenuContainer")
         self.rightMenuContainer.setMinimumSize(QSize(200, 0))
+        self.rightMenuContainer.setMaximumSize(QSize(200, 401))
         self.verticalLayout_11 = QVBoxLayout(self.rightMenuContainer)
         self.verticalLayout_11.setSpacing(0)
         self.verticalLayout_11.setObjectName(u"verticalLayout_11")
@@ -471,12 +482,12 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_9.addWidget(self.label_7)
 
-        self.pushButton_7 = QPushButton(self.frame_8)
-        self.pushButton_7.setObjectName(u"pushButton_7")
-        self.pushButton_7.setIcon(icon7)
-        self.pushButton_7.setIconSize(QSize(24, 24))
+        self.closeRightMenuBtn = QPushButton(self.frame_8)
+        self.closeRightMenuBtn.setObjectName(u"closeRightMenuBtn")
+        self.closeRightMenuBtn.setIcon(icon7)
+        self.closeRightMenuBtn.setIconSize(QSize(24, 24))
 
-        self.horizontalLayout_9.addWidget(self.pushButton_7, 0, Qt.AlignRight)
+        self.horizontalLayout_9.addWidget(self.closeRightMenuBtn, 0, Qt.AlignRight)
 
 
         self.verticalLayout_12.addWidget(self.frame_8)
@@ -554,9 +565,9 @@ class Ui_MainWindow(object):
 
         self.pushButton_8 = QPushButton(self.frame_9)
         self.pushButton_8.setObjectName(u"pushButton_8")
-        icon13 = QIcon()
-        icon13.addFile(u":/icons/icons/feather-WHITE/x-octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_8.setIcon(icon13)
+        icon14 = QIcon()
+        icon14.addFile(u":/icons/icons/feather-WHITE/x-octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_8.setIcon(icon14)
         self.pushButton_8.setIconSize(QSize(24, 24))
 
         self.horizontalLayout_10.addWidget(self.pushButton_8, 0, Qt.AlignRight)
@@ -657,14 +668,15 @@ class Ui_MainWindow(object):
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"Help", None))
         self.label_5.setText("")
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Construction App", None))
+        self.notificationBtn.setText("")
 #if QT_CONFIG(tooltip)
-        self.pushButton_6.setToolTip(QCoreApplication.translate("MainWindow", u"More", None))
+        self.moreMenuBtn.setToolTip(QCoreApplication.translate("MainWindow", u"More", None))
 #endif // QT_CONFIG(tooltip)
-        self.pushButton_6.setText("")
+        self.moreMenuBtn.setText("")
 #if QT_CONFIG(tooltip)
-        self.pushButton_5.setToolTip(QCoreApplication.translate("MainWindow", u"Profile", None))
+        self.profileMenuBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Profile", None))
 #endif // QT_CONFIG(tooltip)
-        self.pushButton_5.setText("")
+        self.profileMenuBtn.setText("")
 #if QT_CONFIG(tooltip)
         self.minimizeBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Minimize Window", None))
 #endif // QT_CONFIG(tooltip)
@@ -682,9 +694,9 @@ class Ui_MainWindow(object):
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"Reports", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"Right Menu", None))
 #if QT_CONFIG(tooltip)
-        self.pushButton_7.setToolTip(QCoreApplication.translate("MainWindow", u"Close Menu", None))
+        self.closeRightMenuBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close Menu", None))
 #endif // QT_CONFIG(tooltip)
-        self.pushButton_7.setText("")
+        self.closeRightMenuBtn.setText("")
         self.label_8.setText(QCoreApplication.translate("MainWindow", u"Profile", None))
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"More ...", None))
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"Notification", None))
