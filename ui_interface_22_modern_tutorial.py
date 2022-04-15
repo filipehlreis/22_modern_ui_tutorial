@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interface_22_modern_tutorialZqaxfE.ui'
+## Form generated from reading UI file 'interface_22_modern_tutorialyaPkOr.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -11,6 +11,8 @@
 from PySide2.QtCore import *
 from PySide2.QtGui import *
 from PySide2.QtWidgets import *
+
+from Custom_Widgets.Widgets import QCustomSlideMenu
 
 import resources_rc
 
@@ -61,8 +63,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setSpacing(0)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
-        self.leftMenuContainer = QWidget(self.centralwidget)
+        self.leftMenuContainer = QCustomSlideMenu(self.centralwidget)
         self.leftMenuContainer.setObjectName(u"leftMenuContainer")
+        self.leftMenuContainer.setMaximumSize(QSize(45, 16777215))
         self.verticalLayout = QVBoxLayout(self.leftMenuContainer)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -180,12 +183,12 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addWidget(self.frame_3, 0, Qt.AlignBottom)
 
 
-        self.verticalLayout.addWidget(self.leftMenuSubContainer, 0, Qt.AlignLeft)
+        self.verticalLayout.addWidget(self.leftMenuSubContainer)
 
 
         self.horizontalLayout.addWidget(self.leftMenuContainer, 0, Qt.AlignLeft)
 
-        self.centerMenuContainer = QWidget(self.centralwidget)
+        self.centerMenuContainer = QCustomSlideMenu(self.centralwidget)
         self.centerMenuContainer.setObjectName(u"centerMenuContainer")
         self.centerMenuContainer.setMinimumSize(QSize(200, 0))
         self.centerMenuContainer.setSizeIncrement(QSize(0, 0))
@@ -442,7 +445,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_8.addWidget(self.mainContentsContainer)
 
-        self.rightMenuContainer = QWidget(self.mainBodyContent)
+        self.rightMenuContainer = QCustomSlideMenu(self.mainBodyContent)
         self.rightMenuContainer.setObjectName(u"rightMenuContainer")
         self.rightMenuContainer.setMinimumSize(QSize(200, 0))
         self.verticalLayout_11 = QVBoxLayout(self.rightMenuContainer)
@@ -516,7 +519,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_10.addWidget(self.mainBodyContent)
 
-        self.popupNotificationContainer = QWidget(self.mainBodyContainer)
+        self.popupNotificationContainer = QCustomSlideMenu(self.mainBodyContainer)
         self.popupNotificationContainer.setObjectName(u"popupNotificationContainer")
         self.verticalLayout_19 = QVBoxLayout(self.popupNotificationContainer)
         self.verticalLayout_19.setObjectName(u"verticalLayout_19")
