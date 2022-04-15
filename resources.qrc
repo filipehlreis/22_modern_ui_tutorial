@@ -1801,4 +1801,7 @@
     <file>icons/zoom-out_disabled.png</file>
     <file>icons/zoom-out_focus.png</file>
   </qresource>
+  <qresource prefix="images">
+    <file>assets/logo_construction.png</file>
+  </qresource>
 </RCC>
