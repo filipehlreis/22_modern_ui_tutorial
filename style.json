@@ -122,5 +122,51 @@
                 "buttonName": "notificationBtn"
             }]
 	    }
-    ]
+    ],
+    "QStackedWidget":[
+		{
+			"name":"mainPages",
+			"navigation":[
+				{
+					"navigationButtons":[
+						{
+							"homeBtn": "homePage",
+							"dataBtn": "dataPage",
+							"reportBtn": "reportsPage"
+						}
+					]
+				}
+			]
+	
+		},
+        {
+			"name":"centerMenuPages",
+			"navigation":[
+				{
+					"navigationButtons":[
+						{
+							"settingsBtn": "settingsPage",
+							"infoBtn": "informationPage",
+							"helpBtn": "helpPage"
+						}
+					]
+				}
+			]
+	
+		},
+        {
+			"name":"rightMenuPages",
+			"navigation":[
+				{
+					"navigationButtons":[
+						{
+							"profileMenuBtn": "profilePage",
+							"moreMenuBtn": "morePage"
+						}
+					]
+				}
+			]
+	
+		}
+	]
 }

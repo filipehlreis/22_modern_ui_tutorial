@@ -458,7 +458,7 @@ border-radius: 10px;
            </widget>
           </item>
           <item>
-           <widget class="QStackedWidget" name="stackedWidget">
+           <widget class="QCustomStackedWidget" name="centerMenuPages">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -466,9 +466,9 @@ border-radius: 10px;
              </size>
             </property>
             <property name="currentIndex">
-             <number>1</number>
+             <number>2</number>
             </property>
-            <widget class="QWidget" name="page">
+            <widget class="QWidget" name="settingsPage">
              <layout class="QVBoxLayout" name="verticalLayout_7">
               <item>
                <widget class="QLabel" name="label_2">
@@ -487,7 +487,7 @@ border-radius: 10px;
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="page_2">
+            <widget class="QWidget" name="informationPage">
              <layout class="QVBoxLayout" name="verticalLayout_8">
               <item>
                <widget class="QLabel" name="label_3">
@@ -506,7 +506,7 @@ border-radius: 10px;
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="page_3">
+            <widget class="QWidget" name="helpPage">
              <layout class="QVBoxLayout" name="verticalLayout_9">
               <item>
                <widget class="QLabel" name="label_4">
@@ -793,11 +793,11 @@ border-radius: 10px;
            <widget class="QWidget" name="mainContentsContainer" native="true">
             <layout class="QVBoxLayout" name="verticalLayout_15">
              <item>
-              <widget class="QStackedWidget" name="stackedWidget_3">
+              <widget class="QCustomStackedWidget" name="mainPages">
                <property name="currentIndex">
-                <number>2</number>
+                <number>1</number>
                </property>
-               <widget class="QWidget" name="page_6">
+               <widget class="QWidget" name="homePage">
                 <layout class="QVBoxLayout" name="verticalLayout_16">
                  <item>
                   <widget class="QLabel" name="label_10">
@@ -816,7 +816,7 @@ border-radius: 10px;
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="page_7">
+               <widget class="QWidget" name="dataPage">
                 <layout class="QVBoxLayout" name="verticalLayout_17">
                  <item>
                   <widget class="QLabel" name="label_11">
@@ -835,7 +835,7 @@ border-radius: 10px;
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="page_8">
+               <widget class="QWidget" name="reportsPage">
                 <layout class="QVBoxLayout" name="verticalLayout_18">
                  <item>
                   <widget class="QLabel" name="label_12">
@@ -956,11 +956,11 @@ border-radius: 10px;
                  </widget>
                 </item>
                 <item>
-                 <widget class="QStackedWidget" name="stackedWidget_2">
+                 <widget class="QCustomStackedWidget" name="rightMenuPages">
                   <property name="currentIndex">
                    <number>1</number>
                   </property>
-                  <widget class="QWidget" name="page_4">
+                  <widget class="QWidget" name="profilePage">
                    <layout class="QVBoxLayout" name="verticalLayout_13">
                     <item>
                      <widget class="QLabel" name="label_8">
@@ -979,7 +979,7 @@ border-radius: 10px;
                     </item>
                    </layout>
                   </widget>
-                  <widget class="QWidget" name="page_5">
+                  <widget class="QWidget" name="morePage">
                    <layout class="QVBoxLayout" name="verticalLayout_14">
                     <item>
                      <widget class="QLabel" name="label_9">
@@ -1156,6 +1156,12 @@ border-radius: 10px;
   <customwidget>
    <class>QCustomSlideMenu</class>
    <extends>QWidget</extends>
+   <header location="global">Custom_Widgets.Widgets.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>QCustomStackedWidget</class>
+   <extends>QStackedWidget</extends>
    <header location="global">Custom_Widgets.Widgets.h</header>
    <container>1</container>
   </customwidget>

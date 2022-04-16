@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interface_22_modern_tutorialNrxEyV.ui'
+## Form generated from reading UI file 'interface_22_modern_tutorialSZISiI.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -13,6 +13,7 @@ from PySide2.QtGui import *
 from PySide2.QtWidgets import *
 
 from Custom_Widgets.Widgets import QCustomSlideMenu
+from Custom_Widgets.Widgets import QCustomStackedWidget
 
 import resources_rc
 
@@ -227,14 +228,14 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_6.addWidget(self.frame_6, 0, Qt.AlignTop)
 
-        self.stackedWidget = QStackedWidget(self.centerMenuSubContainer)
-        self.stackedWidget.setObjectName(u"stackedWidget")
-        self.stackedWidget.setMinimumSize(QSize(0, 0))
-        self.page = QWidget()
-        self.page.setObjectName(u"page")
-        self.verticalLayout_7 = QVBoxLayout(self.page)
+        self.centerMenuPages = QCustomStackedWidget(self.centerMenuSubContainer)
+        self.centerMenuPages.setObjectName(u"centerMenuPages")
+        self.centerMenuPages.setMinimumSize(QSize(0, 0))
+        self.settingsPage = QWidget()
+        self.settingsPage.setObjectName(u"settingsPage")
+        self.verticalLayout_7 = QVBoxLayout(self.settingsPage)
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
-        self.label_2 = QLabel(self.page)
+        self.label_2 = QLabel(self.settingsPage)
         self.label_2.setObjectName(u"label_2")
         font = QFont()
         font.setPointSize(13)
@@ -243,33 +244,33 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_7.addWidget(self.label_2)
 
-        self.stackedWidget.addWidget(self.page)
-        self.page_2 = QWidget()
-        self.page_2.setObjectName(u"page_2")
-        self.verticalLayout_8 = QVBoxLayout(self.page_2)
+        self.centerMenuPages.addWidget(self.settingsPage)
+        self.informationPage = QWidget()
+        self.informationPage.setObjectName(u"informationPage")
+        self.verticalLayout_8 = QVBoxLayout(self.informationPage)
         self.verticalLayout_8.setObjectName(u"verticalLayout_8")
-        self.label_3 = QLabel(self.page_2)
+        self.label_3 = QLabel(self.informationPage)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setFont(font)
         self.label_3.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_8.addWidget(self.label_3)
 
-        self.stackedWidget.addWidget(self.page_2)
-        self.page_3 = QWidget()
-        self.page_3.setObjectName(u"page_3")
-        self.verticalLayout_9 = QVBoxLayout(self.page_3)
+        self.centerMenuPages.addWidget(self.informationPage)
+        self.helpPage = QWidget()
+        self.helpPage.setObjectName(u"helpPage")
+        self.verticalLayout_9 = QVBoxLayout(self.helpPage)
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
-        self.label_4 = QLabel(self.page_3)
+        self.label_4 = QLabel(self.helpPage)
         self.label_4.setObjectName(u"label_4")
         self.label_4.setFont(font)
         self.label_4.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_9.addWidget(self.label_4)
 
-        self.stackedWidget.addWidget(self.page_3)
+        self.centerMenuPages.addWidget(self.helpPage)
 
-        self.verticalLayout_6.addWidget(self.stackedWidget)
+        self.verticalLayout_6.addWidget(self.centerMenuPages)
 
 
         self.verticalLayout_5.addWidget(self.centerMenuSubContainer, 0, Qt.AlignLeft)
@@ -411,46 +412,46 @@ class Ui_MainWindow(object):
         self.mainContentsContainer.setObjectName(u"mainContentsContainer")
         self.verticalLayout_15 = QVBoxLayout(self.mainContentsContainer)
         self.verticalLayout_15.setObjectName(u"verticalLayout_15")
-        self.stackedWidget_3 = QStackedWidget(self.mainContentsContainer)
-        self.stackedWidget_3.setObjectName(u"stackedWidget_3")
-        self.page_6 = QWidget()
-        self.page_6.setObjectName(u"page_6")
-        self.verticalLayout_16 = QVBoxLayout(self.page_6)
+        self.mainPages = QCustomStackedWidget(self.mainContentsContainer)
+        self.mainPages.setObjectName(u"mainPages")
+        self.homePage = QWidget()
+        self.homePage.setObjectName(u"homePage")
+        self.verticalLayout_16 = QVBoxLayout(self.homePage)
         self.verticalLayout_16.setObjectName(u"verticalLayout_16")
-        self.label_10 = QLabel(self.page_6)
+        self.label_10 = QLabel(self.homePage)
         self.label_10.setObjectName(u"label_10")
         self.label_10.setFont(font)
         self.label_10.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_16.addWidget(self.label_10)
 
-        self.stackedWidget_3.addWidget(self.page_6)
-        self.page_7 = QWidget()
-        self.page_7.setObjectName(u"page_7")
-        self.verticalLayout_17 = QVBoxLayout(self.page_7)
+        self.mainPages.addWidget(self.homePage)
+        self.dataPage = QWidget()
+        self.dataPage.setObjectName(u"dataPage")
+        self.verticalLayout_17 = QVBoxLayout(self.dataPage)
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
-        self.label_11 = QLabel(self.page_7)
+        self.label_11 = QLabel(self.dataPage)
         self.label_11.setObjectName(u"label_11")
         self.label_11.setFont(font)
         self.label_11.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_17.addWidget(self.label_11)
 
-        self.stackedWidget_3.addWidget(self.page_7)
-        self.page_8 = QWidget()
-        self.page_8.setObjectName(u"page_8")
-        self.verticalLayout_18 = QVBoxLayout(self.page_8)
+        self.mainPages.addWidget(self.dataPage)
+        self.reportsPage = QWidget()
+        self.reportsPage.setObjectName(u"reportsPage")
+        self.verticalLayout_18 = QVBoxLayout(self.reportsPage)
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
-        self.label_12 = QLabel(self.page_8)
+        self.label_12 = QLabel(self.reportsPage)
         self.label_12.setObjectName(u"label_12")
         self.label_12.setFont(font)
         self.label_12.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_18.addWidget(self.label_12)
 
-        self.stackedWidget_3.addWidget(self.page_8)
+        self.mainPages.addWidget(self.reportsPage)
 
-        self.verticalLayout_15.addWidget(self.stackedWidget_3)
+        self.verticalLayout_15.addWidget(self.mainPages)
 
 
         self.horizontalLayout_8.addWidget(self.mainContentsContainer)
@@ -492,34 +493,34 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_12.addWidget(self.frame_8)
 
-        self.stackedWidget_2 = QStackedWidget(self.rightMenuSubContainer)
-        self.stackedWidget_2.setObjectName(u"stackedWidget_2")
-        self.page_4 = QWidget()
-        self.page_4.setObjectName(u"page_4")
-        self.verticalLayout_13 = QVBoxLayout(self.page_4)
+        self.rightMenuPages = QCustomStackedWidget(self.rightMenuSubContainer)
+        self.rightMenuPages.setObjectName(u"rightMenuPages")
+        self.profilePage = QWidget()
+        self.profilePage.setObjectName(u"profilePage")
+        self.verticalLayout_13 = QVBoxLayout(self.profilePage)
         self.verticalLayout_13.setObjectName(u"verticalLayout_13")
-        self.label_8 = QLabel(self.page_4)
+        self.label_8 = QLabel(self.profilePage)
         self.label_8.setObjectName(u"label_8")
         self.label_8.setFont(font)
         self.label_8.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_13.addWidget(self.label_8)
 
-        self.stackedWidget_2.addWidget(self.page_4)
-        self.page_5 = QWidget()
-        self.page_5.setObjectName(u"page_5")
-        self.verticalLayout_14 = QVBoxLayout(self.page_5)
+        self.rightMenuPages.addWidget(self.profilePage)
+        self.morePage = QWidget()
+        self.morePage.setObjectName(u"morePage")
+        self.verticalLayout_14 = QVBoxLayout(self.morePage)
         self.verticalLayout_14.setObjectName(u"verticalLayout_14")
-        self.label_9 = QLabel(self.page_5)
+        self.label_9 = QLabel(self.morePage)
         self.label_9.setObjectName(u"label_9")
         self.label_9.setFont(font)
         self.label_9.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_14.addWidget(self.label_9)
 
-        self.stackedWidget_2.addWidget(self.page_5)
+        self.rightMenuPages.addWidget(self.morePage)
 
-        self.verticalLayout_12.addWidget(self.stackedWidget_2)
+        self.verticalLayout_12.addWidget(self.rightMenuPages)
 
 
         self.verticalLayout_11.addWidget(self.rightMenuSubContainer)
@@ -620,9 +621,9 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(1)
-        self.stackedWidget_3.setCurrentIndex(2)
-        self.stackedWidget_2.setCurrentIndex(1)
+        self.centerMenuPages.setCurrentIndex(2)
+        self.mainPages.setCurrentIndex(1)
+        self.rightMenuPages.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
