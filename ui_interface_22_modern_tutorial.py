@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'interface_22_modern_tutoriallzlhgA.ui'
+## Form generated from reading UI file 'interface_22_modern_tutorialNrxEyV.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.2
 ##
@@ -563,14 +563,14 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_10.addWidget(self.label_13)
 
-        self.pushButton_8 = QPushButton(self.frame_9)
-        self.pushButton_8.setObjectName(u"pushButton_8")
+        self.closeNotificationBtn = QPushButton(self.frame_9)
+        self.closeNotificationBtn.setObjectName(u"closeNotificationBtn")
         icon14 = QIcon()
         icon14.addFile(u":/icons/icons/feather-WHITE/x-octagon.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_8.setIcon(icon14)
-        self.pushButton_8.setIconSize(QSize(24, 24))
+        self.closeNotificationBtn.setIcon(icon14)
+        self.closeNotificationBtn.setIconSize(QSize(24, 24))
 
-        self.horizontalLayout_10.addWidget(self.pushButton_8, 0, Qt.AlignRight)
+        self.horizontalLayout_10.addWidget(self.closeNotificationBtn, 0, Qt.AlignRight)
 
 
         self.verticalLayout_20.addWidget(self.frame_9)
@@ -702,9 +702,9 @@ class Ui_MainWindow(object):
         self.label_14.setText(QCoreApplication.translate("MainWindow", u"Notification", None))
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"Notification Message", None))
 #if QT_CONFIG(tooltip)
-        self.pushButton_8.setToolTip(QCoreApplication.translate("MainWindow", u"Close Notification", None))
+        self.closeNotificationBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close Notification", None))
 #endif // QT_CONFIG(tooltip)
-        self.pushButton_8.setText("")
+        self.closeNotificationBtn.setText("")
         self.label_15.setText(QCoreApplication.translate("MainWindow", u"Copyright Spinn Tv", None))
     # retranslateUi
 

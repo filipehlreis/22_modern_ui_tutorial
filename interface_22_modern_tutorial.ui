@@ -1056,7 +1056,7 @@ border-radius: 10px;
                  </widget>
                 </item>
                 <item alignment="Qt::AlignRight">
-                 <widget class="QPushButton" name="pushButton_8">
+                 <widget class="QPushButton" name="closeNotificationBtn">
                   <property name="toolTip">
                    <string>Close Notification</string>
                   </property>

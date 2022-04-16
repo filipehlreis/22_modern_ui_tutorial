@@ -49,7 +49,7 @@ class MainWindow(QMainWindow):
         self.ui.infoBtn.clicked.connect(lambda: self.ui.centerMenuContainer.expandMenu())
         self.ui.helpBtn.clicked.connect(lambda: self.ui.centerMenuContainer.expandMenu())
 
-        # CLOSE CENTER MENU WIDGET SIZE
+        # CLOSE CENTER MENU WIDGET
         self.ui.closeCenterMenuBtn.clicked.connect(lambda: self.ui.centerMenuContainer.collapseMenu())
 
         # EXPAND RIGHT MENU WIDGET SIZE
@@ -57,8 +57,12 @@ class MainWindow(QMainWindow):
         self.ui.profileMenuBtn.clicked.connect(lambda: self.ui.rightMenuContainer.expandMenu())
     
 
-        # CLOSE RIGHT MENU WIDGET SIZE
+        # CLOSE RIGHT MENU WIDGET
         self.ui.closeRightMenuBtn.clicked.connect(lambda: self.ui.rightMenuContainer.collapseMenu())
+
+
+        # CLOSE NOTIFICATION MENU WIDGET
+        self.ui.closeNotificationBtn.clicked.connect(lambda: self.ui.popupNotificationContainer.collapseMenu())
 
 
 # ########################################################################### #
