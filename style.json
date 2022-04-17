@@ -168,5 +168,33 @@
 			]
 	
 		}
-	]
+	],
+    "QPushButtonGroup": [
+        {
+            "Buttons": [
+                "homeBtn",
+                "reportBtn",
+                "dataBtn"
+            ],
+            "Style":[
+                    {
+                    "Active": "background-color: #1f232a;",
+                    "NotActive": ""
+                }
+            ]
+        },
+        {
+            "Buttons": [
+                "settingsBtn",
+                "helpBtn",
+                "infoBtn"
+            ],
+            "Style":[
+                    {
+                    "Active": "background-color: #2c313c;",
+                    "NotActive": ""
+                }
+            ]
+        }
+    ]
 }
