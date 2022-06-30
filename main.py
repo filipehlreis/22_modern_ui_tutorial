@@ -8,6 +8,7 @@
 # ########################################################################### #
 import sys
 import os
+from codigo.functions_program import read_omie_sheet, export_excel_sheet_omie
 # ########################################################################### #
 # IMPORT GUI GILE
 from ui_interface_22_modern_tutorial import *
@@ -45,24 +46,39 @@ class MainWindow(QMainWindow):
         self.show()
 
         # EXPAND CENTER MENU WIDGET SIZE
-        self.ui.settingsBtn.clicked.connect(lambda: self.ui.centerMenuContainer.expandMenu())
-        self.ui.infoBtn.clicked.connect(lambda: self.ui.centerMenuContainer.expandMenu())
-        self.ui.helpBtn.clicked.connect(lambda: self.ui.centerMenuContainer.expandMenu())
+        self.ui.settingsBtn.clicked.connect(
+            lambda: self.ui.centerMenuContainer.expandMenu())
+        self.ui.infoBtn.clicked.connect(
+            lambda: self.ui.centerMenuContainer.expandMenu())
+        self.ui.helpBtn.clicked.connect(
+            lambda: self.ui.centerMenuContainer.expandMenu())
 
         # CLOSE CENTER MENU WIDGET
-        self.ui.closeCenterMenuBtn.clicked.connect(lambda: self.ui.centerMenuContainer.collapseMenu())
+        self.ui.closeCenterMenuBtn.clicked.connect(
+            lambda: self.ui.centerMenuContainer.collapseMenu())
 
         # EXPAND RIGHT MENU WIDGET SIZE
-        self.ui.moreMenuBtn.clicked.connect(lambda: self.ui.rightMenuContainer.expandMenu())
-        self.ui.profileMenuBtn.clicked.connect(lambda: self.ui.rightMenuContainer.expandMenu())
-    
+        self.ui.moreMenuBtn.clicked.connect(
+            lambda: self.ui.rightMenuContainer.expandMenu())
+        self.ui.profileMenuBtn.clicked.connect(
+            lambda: self.ui.rightMenuContainer.expandMenu())
 
         # CLOSE RIGHT MENU WIDGET
-        self.ui.closeRightMenuBtn.clicked.connect(lambda: self.ui.rightMenuContainer.collapseMenu())
-
+        self.ui.closeRightMenuBtn.clicked.connect(
+            lambda: self.ui.rightMenuContainer.collapseMenu())
 
         # CLOSE NOTIFICATION MENU WIDGET
-        self.ui.closeNotificationBtn.clicked.connect(lambda: self.ui.popupNotificationContainer.collapseMenu())
+        self.ui.closeNotificationBtn.clicked.connect(
+            lambda: self.ui.popupNotificationContainer.collapseMenu())
+
+        # BUTTONS
+        self.ui.importCsvOmieBtn.clicked.connect(
+            lambda: read_omie_sheet()
+        )
+
+        self.ui.exportCsvOmieToHdBtn.clicked.connect(
+            lambda: export_excel_sheet_omie()
+        )
 
 
 # ########################################################################### #

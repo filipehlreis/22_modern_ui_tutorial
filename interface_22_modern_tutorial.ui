@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>745</width>
-    <height>600</height>
+    <width>1040</width>
+    <height>609</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,14 +27,21 @@
 	background-color: #1f232a;
 }
 
-#leftMenuSubContainer{
+#leftMenuSubContainer, #left_center_SubContainer{
 	background-color: #16191d;
 }
 #leftMenuSubContainer QPushButton {
 	text-align: left;
-	padding: 5px 10px;
+	padding: 5px 10px 5px 10px;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	margin: 1px 0px;
+
+}
+#leftMenuSubContainer QPushButton:hover {
+	background-color: #1f232a;
 }
 
 #centerMenuSubContainer, #rightMenuSubContainer{
@@ -48,6 +55,26 @@ border-radius: 10px;
 
 #headerContainer, #footerContainer{
 	background-color: #2c313c;
+}
+
+
+
+
+#closeBtn, #minimizeBtn, #restoreBtn{
+	text-align: center;
+	padding: 4px 4px 4px 4px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+
+}
+#minimizeBtn:hover, #restoreBtn:hover {
+	background-color: #1f232a;
+}
+
+#closeBtn:hover {
+	background-color: #8B2635;
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -74,7 +101,7 @@ border-radius: 10px;
      <widget class="QCustomSlideMenu" name="leftMenuContainer" native="true">
       <property name="maximumSize">
        <size>
-        <width>45</width>
+        <width>200</width>
         <height>16777215</height>
        </size>
       </property>
@@ -128,7 +155,7 @@ border-radius: 10px;
               <number>0</number>
              </property>
              <property name="topMargin">
-              <number>0</number>
+              <number>8</number>
              </property>
              <property name="rightMargin">
               <number>0</number>
@@ -153,6 +180,9 @@ border-radius: 10px;
                  <width>24</width>
                  <height>24</height>
                 </size>
+               </property>
+               <property name="flat">
+                <bool>false</bool>
                </property>
               </widget>
              </item>
@@ -191,14 +221,40 @@ border-radius: 10px;
              </property>
              <item>
               <widget class="QPushButton" name="homeBtn">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="sizeIncrement">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <stylestrategy>PreferAntialias</stylestrategy>
+                </font>
+               </property>
                <property name="toolTip">
-                <string>Home</string>
+                <string>Página Inicial</string>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="autoFillBackground">
+                <bool>false</bool>
                </property>
                <property name="styleSheet">
                 <string notr="true">background-color: #1F232A;</string>
                </property>
                <property name="text">
-                <string>Home</string>
+                <string>Página Inicial</string>
                </property>
                <property name="icon">
                 <iconset resource="resources.qrc">
@@ -215,10 +271,50 @@ border-radius: 10px;
              <item>
               <widget class="QPushButton" name="dataBtn">
                <property name="toolTip">
-                <string>Data Analysis</string>
+                <string>Banco de Dados</string>
                </property>
                <property name="text">
-                <string>Data Analysis</string>
+                <string>Banco de Dados</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resources.qrc">
+                 <normaloff>:/icons/icons/feather-WHITE/database.svg</normaloff>:/icons/icons/feather-WHITE/database.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="waitingBtn">
+               <property name="toolTip">
+                <string>Aguardando Padronização</string>
+               </property>
+               <property name="text">
+                <string>Aguardando Padronização</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resources.qrc">
+                 <normaloff>:/icons/icons/feather-WHITE/clock.svg</normaloff>:/icons/icons/feather-WHITE/clock.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="bomBtn">
+               <property name="toolTip">
+                <string>Listas de Materiais</string>
+               </property>
+               <property name="text">
+                <string>Listas de Materiais</string>
                </property>
                <property name="icon">
                 <iconset resource="resources.qrc">
@@ -233,16 +329,76 @@ border-radius: 10px;
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="reportBtn">
+              <widget class="QPushButton" name="pickplaceBtn">
                <property name="toolTip">
-                <string>View Reports</string>
+                <string>Pick &amp; Place</string>
                </property>
                <property name="text">
-                <string>Reports</string>
+                <string>Pick &amp;&amp; Place</string>
                </property>
                <property name="icon">
                 <iconset resource="resources.qrc">
-                 <normaloff>:/icons/icons/feather-WHITE/printer.svg</normaloff>:/icons/icons/feather-WHITE/printer.svg</iconset>
+                 <normaloff>:/icons/icons/feather-WHITE/cpu.svg</normaloff>:/icons/icons/feather-WHITE/cpu.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="forecastingBtn">
+               <property name="toolTip">
+                <string>Previsão de Consumo</string>
+               </property>
+               <property name="text">
+                <string>Previsão de Consumo</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resources.qrc">
+                 <normaloff>:/icons/icons/feather-WHITE/trending-up.svg</normaloff>:/icons/icons/feather-WHITE/trending-up.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="kitsBtn">
+               <property name="toolTip">
+                <string>KITs</string>
+               </property>
+               <property name="text">
+                <string>KITs</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resources.qrc">
+                 <normaloff>:/icons/icons/feather-WHITE/package.svg</normaloff>:/icons/icons/feather-WHITE/package.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>24</width>
+                 <height>24</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="convertBtn">
+               <property name="toolTip">
+                <string>Conversões de Medidas</string>
+               </property>
+               <property name="text">
+                <string>Conversões de Medidas</string>
+               </property>
+               <property name="icon">
+                <iconset resource="resources.qrc">
+                 <normaloff>:/icons/icons/feather-WHITE/refresh-cw.svg</normaloff>:/icons/icons/feather-WHITE/refresh-cw.svg</iconset>
                </property>
                <property name="iconSize">
                 <size>
@@ -295,10 +451,10 @@ border-radius: 10px;
              <item>
               <widget class="QPushButton" name="settingsBtn">
                <property name="toolTip">
-                <string>Go to Settings</string>
+                <string>Configurações</string>
                </property>
                <property name="text">
-                <string>Settings</string>
+                <string>Configurações</string>
                </property>
                <property name="icon">
                 <iconset resource="resources.qrc">
@@ -315,10 +471,10 @@ border-radius: 10px;
              <item>
               <widget class="QPushButton" name="infoBtn">
                <property name="toolTip">
-                <string>Information about the app</string>
+                <string>Informações</string>
                </property>
                <property name="text">
-                <string>Information</string>
+                <string>Informações</string>
                </property>
                <property name="icon">
                 <iconset resource="resources.qrc">
@@ -335,10 +491,10 @@ border-radius: 10px;
              <item>
               <widget class="QPushButton" name="helpBtn">
                <property name="toolTip">
-                <string>Get more help</string>
+                <string>Ajuda</string>
                </property>
                <property name="text">
-                <string>Help</string>
+                <string>Ajuda</string>
                </property>
                <property name="icon">
                 <iconset resource="resources.qrc">
@@ -353,6 +509,70 @@ border-radius: 10px;
               </widget>
              </item>
             </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="left_center_Container" native="true">
+      <layout class="QVBoxLayout" name="verticalLayout_26">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="left_center_SubContainer" native="true">
+         <property name="minimumSize">
+          <size>
+           <width>10</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>10</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_27">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame_11">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
            </widget>
           </item>
          </layout>
@@ -456,6 +676,9 @@ border-radius: 10px;
              </item>
             </layout>
            </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget" native="true"/>
           </item>
           <item>
            <widget class="QCustomStackedWidget" name="centerMenuPages">
@@ -617,7 +840,7 @@ border-radius: 10px;
                 </font>
                </property>
                <property name="text">
-                <string>Construction App</string>
+                <string>Code Description Manager</string>
                </property>
               </widget>
              </item>
@@ -795,10 +1018,24 @@ border-radius: 10px;
              <item>
               <widget class="QCustomStackedWidget" name="mainPages">
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <widget class="QWidget" name="homePage">
                 <layout class="QVBoxLayout" name="verticalLayout_16">
+                 <item>
+                  <widget class="QPushButton" name="importCsvOmieBtn">
+                   <property name="text">
+                    <string>Importar arquivo EXCEL do OMIE</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="exportCsvOmieToHdBtn">
+                   <property name="text">
+                    <string>Gravar CSV tratado no HD</string>
+                   </property>
+                  </widget>
+                 </item>
                  <item>
                   <widget class="QLabel" name="label_10">
                    <property name="font">
@@ -819,6 +1056,369 @@ border-radius: 10px;
                <widget class="QWidget" name="dataPage">
                 <layout class="QVBoxLayout" name="verticalLayout_17">
                  <item>
+                  <widget class="QFrame" name="frame_12">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <property name="lineWidth">
+                    <number>2</number>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_14">
+                    <property name="sizeConstraint">
+                     <enum>QLayout::SetDefaultConstraint</enum>
+                    </property>
+                    <item>
+                     <widget class="QTableWidget" name="tableWidget">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Montserrat Medium</family>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QHeaderView::section {
+    background-color: #30B28C;
+	font: bold 10pt &quot;Arial&quot;;
+
+    border: solid;
+    height: 30px;
+}
+</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Sunken</enum>
+                      </property>
+                      <property name="sizeAdjustPolicy">
+                       <enum>QAbstractScrollArea::AdjustToContents</enum>
+                      </property>
+                      <property name="editTriggers">
+                       <set>QAbstractItemView::NoEditTriggers</set>
+                      </property>
+                      <property name="dragEnabled">
+                       <bool>false</bool>
+                      </property>
+                      <property name="dragDropMode">
+                       <enum>QAbstractItemView::NoDragDrop</enum>
+                      </property>
+                      <property name="alternatingRowColors">
+                       <bool>false</bool>
+                      </property>
+                      <property name="selectionMode">
+                       <enum>QAbstractItemView::ExtendedSelection</enum>
+                      </property>
+                      <property name="selectionBehavior">
+                       <enum>QAbstractItemView::SelectRows</enum>
+                      </property>
+                      <property name="horizontalScrollMode">
+                       <enum>QAbstractItemView::ScrollPerPixel</enum>
+                      </property>
+                      <property name="sortingEnabled">
+                       <bool>true</bool>
+                      </property>
+                      <property name="cornerButtonEnabled">
+                       <bool>false</bool>
+                      </property>
+                      <attribute name="horizontalHeaderMinimumSectionSize">
+                       <number>60</number>
+                      </attribute>
+                      <attribute name="horizontalHeaderHighlightSections">
+                       <bool>true</bool>
+                      </attribute>
+                      <attribute name="horizontalHeaderStretchLastSection">
+                       <bool>true</bool>
+                      </attribute>
+                      <row>
+                       <property name="text">
+                        <string>1</string>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignLeading|AlignVCenter</set>
+                       </property>
+                      </row>
+                      <row>
+                       <property name="text">
+                        <string>2</string>
+                       </property>
+                      </row>
+                      <row>
+                       <property name="text">
+                        <string>3</string>
+                       </property>
+                      </row>
+                      <row>
+                       <property name="text">
+                        <string>4</string>
+                       </property>
+                      </row>
+                      <row>
+                       <property name="text">
+                        <string>5</string>
+                       </property>
+                      </row>
+                      <column>
+                       <property name="text">
+                        <string>Status</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Código</string>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignLeading|AlignVCenter</set>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Descrição Simplificada</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Descrição Completa</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Quantidade</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Caixa</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Prateleira</string>
+                       </property>
+                      </column>
+                      <column>
+                       <property name="text">
+                        <string>Corredor</string>
+                       </property>
+                      </column>
+                      <item row="0" column="0">
+                       <property name="text">
+                        <string>Ativo</string>
+                       </property>
+                      </item>
+                      <item row="0" column="1">
+                       <property name="text">
+                        <string>660649</string>
+                       </property>
+                       <property name="textAlignment">
+                        <set>AlignLeading|AlignVCenter</set>
+                       </property>
+                      </item>
+                      <item row="0" column="2">
+                       <property name="text">
+                        <string>RESISTOR SMD 0603 82R 5%</string>
+                       </property>
+                      </item>
+                      <item row="0" column="3">
+                       <property name="text">
+                        <string>RESISTOR SMD 0603 82R 5% (PN: CR0603-JW-820ELF) (PN: RK73B1JTTDD820J) (PN: CRGCQ0603F82R) (PN: RC0603JR-0782RL)</string>
+                       </property>
+                      </item>
+                      <item row="0" column="4">
+                       <property name="text">
+                        <string>5000</string>
+                       </property>
+                      </item>
+                      <item row="0" column="5">
+                       <property name="text">
+                        <string>20</string>
+                       </property>
+                      </item>
+                      <item row="0" column="6">
+                       <property name="text">
+                        <string>10</string>
+                       </property>
+                      </item>
+                      <item row="0" column="7">
+                       <property name="text">
+                        <string>1</string>
+                       </property>
+                      </item>
+                      <item row="1" column="0">
+                       <property name="text">
+                        <string>Ativo</string>
+                       </property>
+                      </item>
+                      <item row="1" column="1">
+                       <property name="text">
+                        <string>660630</string>
+                       </property>
+                      </item>
+                      <item row="1" column="2">
+                       <property name="text">
+                        <string>CAPACITOR CERÂMICO SMD 0603 560pF 100V 5% C0G</string>
+                       </property>
+                      </item>
+                      <item row="1" column="3">
+                       <property name="text">
+                        <string>CAPACITOR CERÂMICO SMD 0603 560pF 100V 5% C0G (PN: C1608C0G2A561J080AA) (PN: CC0603JRNPO0BN561) (PN: 0603N561J101CT)</string>
+                       </property>
+                      </item>
+                      <item row="1" column="4">
+                       <property name="text">
+                        <string>7000</string>
+                       </property>
+                      </item>
+                      <item row="1" column="5">
+                       <property name="text">
+                        <string>30</string>
+                       </property>
+                      </item>
+                      <item row="1" column="6">
+                       <property name="text">
+                        <string>4</string>
+                       </property>
+                      </item>
+                      <item row="1" column="7">
+                       <property name="text">
+                        <string>1</string>
+                       </property>
+                      </item>
+                      <item row="2" column="0">
+                       <property name="text">
+                        <string>Ativo</string>
+                       </property>
+                      </item>
+                      <item row="2" column="1">
+                       <property name="text">
+                        <string>660646</string>
+                       </property>
+                      </item>
+                      <item row="2" column="2">
+                       <property name="text">
+                        <string>MICROCONTROLADOR (PN: STM32G070RBT6)</string>
+                       </property>
+                      </item>
+                      <item row="2" column="3">
+                       <property name="text">
+                        <string>MICROCONTROLADOR (PN: STM32G070RBT6)</string>
+                       </property>
+                      </item>
+                      <item row="2" column="4">
+                       <property name="text">
+                        <string>10</string>
+                       </property>
+                      </item>
+                      <item row="2" column="5">
+                       <property name="text">
+                        <string>45</string>
+                       </property>
+                      </item>
+                      <item row="2" column="6">
+                       <property name="text">
+                        <string>3</string>
+                       </property>
+                      </item>
+                      <item row="2" column="7">
+                       <property name="text">
+                        <string>2</string>
+                       </property>
+                      </item>
+                      <item row="3" column="0">
+                       <property name="text">
+                        <string>Ativo</string>
+                       </property>
+                      </item>
+                      <item row="3" column="1">
+                       <property name="text">
+                        <string>660488</string>
+                       </property>
+                      </item>
+                      <item row="3" column="2">
+                       <property name="text">
+                        <string>RESISTOR SMD 0603 470K 5%</string>
+                       </property>
+                      </item>
+                      <item row="3" column="3">
+                       <property name="text">
+                        <string>RESISTOR SMD 0603 470K 5% (PN: CR0603-JW-474ELF) (PN: AC0603JR-07470KL) (PN: RK73B1JTTD474J) (PN: ERJ-3GEYJ474V)</string>
+                       </property>
+                      </item>
+                      <item row="3" column="4">
+                       <property name="text">
+                        <string>10000</string>
+                       </property>
+                      </item>
+                      <item row="3" column="5">
+                       <property name="text">
+                        <string>3</string>
+                       </property>
+                      </item>
+                      <item row="3" column="6">
+                       <property name="text">
+                        <string>1</string>
+                       </property>
+                      </item>
+                      <item row="3" column="7">
+                       <property name="text">
+                        <string>2</string>
+                       </property>
+                      </item>
+                      <item row="4" column="0">
+                       <property name="text">
+                        <string>Inativo</string>
+                       </property>
+                      </item>
+                      <item row="4" column="1">
+                       <property name="text">
+                        <string>772892</string>
+                       </property>
+                      </item>
+                      <item row="4" column="2">
+                       <property name="text">
+                        <string>RESISTOR SMD 0805 510mR 1% 1/4W</string>
+                       </property>
+                      </item>
+                      <item row="4" column="3">
+                       <property name="text">
+                        <string>RESISTOR SMD 0805 510mR 1% 1/4W (PN: KDV08DR510ET‎) (PN: ERJ-6DQFR51V) (PN: RL0805FR-7W0R51L)</string>
+                       </property>
+                      </item>
+                      <item row="4" column="4">
+                       <property name="text">
+                        <string>800</string>
+                       </property>
+                      </item>
+                      <item row="4" column="5">
+                       <property name="text">
+                        <string>22</string>
+                       </property>
+                      </item>
+                      <item row="4" column="6">
+                       <property name="text">
+                        <string>5</string>
+                       </property>
+                      </item>
+                      <item row="4" column="7">
+                       <property name="text">
+                        <string>5</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
                   <widget class="QLabel" name="label_11">
                    <property name="font">
                     <font>
@@ -826,7 +1426,7 @@ border-radius: 10px;
                     </font>
                    </property>
                    <property name="text">
-                    <string>Data Analysis</string>
+                    <string>Data Base</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -835,7 +1435,7 @@ border-radius: 10px;
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="reportsPage">
+               <widget class="QWidget" name="waitingPage">
                 <layout class="QVBoxLayout" name="verticalLayout_18">
                  <item>
                   <widget class="QLabel" name="label_12">
@@ -845,7 +1445,102 @@ border-radius: 10px;
                     </font>
                    </property>
                    <property name="text">
-                    <string>Reports</string>
+                    <string>Aguardando Padronização</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="bomPage">
+                <layout class="QVBoxLayout" name="verticalLayout_21">
+                 <item>
+                  <widget class="QLabel" name="label_16">
+                   <property name="font">
+                    <font>
+                     <pointsize>13</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Lista de Materiais</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="pickplacePage">
+                <layout class="QVBoxLayout" name="verticalLayout_25">
+                 <item>
+                  <widget class="QLabel" name="label_17">
+                   <property name="font">
+                    <font>
+                     <pointsize>13</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Pick &amp; Place</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="forecastingPage">
+                <layout class="QVBoxLayout" name="verticalLayout_24">
+                 <item>
+                  <widget class="QLabel" name="label_18">
+                   <property name="font">
+                    <font>
+                     <pointsize>13</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Previsão de Consumo</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="kitsPage">
+                <layout class="QVBoxLayout" name="verticalLayout_23">
+                 <item>
+                  <widget class="QLabel" name="label_19">
+                   <property name="font">
+                    <font>
+                     <pointsize>13</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>KITs</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="convertPage">
+                <layout class="QVBoxLayout" name="verticalLayout_22">
+                 <item>
+                  <widget class="QLabel" name="label_20">
+                   <property name="font">
+                    <font>
+                     <pointsize>13</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Conversão de Unidades</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -988,8 +1683,14 @@ border-radius: 10px;
                         <pointsize>13</pointsize>
                        </font>
                       </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Sunken</enum>
+                      </property>
                       <property name="text">
                        <string>More ...</string>
+                      </property>
+                      <property name="textFormat">
+                       <enum>Qt::PlainText</enum>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignCenter</set>
@@ -1114,7 +1815,7 @@ border-radius: 10px;
              <item>
               <widget class="QLabel" name="label_15">
                <property name="text">
-                <string>Copyright Spinn Tv</string>
+                <string>Filipe Henrique Leite dos Reis - Engenheiro Eletrônico 2022</string>
                </property>
               </widget>
              </item>
@@ -1135,12 +1836,43 @@ border-radius: 10px;
               <height>30</height>
              </size>
             </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_13">
+             <item>
+              <widget class="QLabel" name="label_21">
+               <property name="font">
+                <font>
+                 <pointsize>7</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::RightToLeft</enum>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: #30B28C;
+text-align: center-center,</string>
+               </property>
+               <property name="text">
+                <string>o</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
          </layout>

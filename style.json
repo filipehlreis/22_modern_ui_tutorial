@@ -27,15 +27,15 @@
         {
             "name": "leftMenuContainer",
             "defaultSize": [{
-                "width": 45,
+                "width": 42,
                 "height": "parent"
             }],
             "collapsedSize": [{
-                "width": 45,
+                "width": 42,
                 "height": "parent"
             }],
             "expandedSize": [{
-                "width": 123,
+                "width": 200,
                 "height": "parent"
             }],
             "toggleButton": [{
@@ -132,7 +132,12 @@
 						{
 							"homeBtn": "homePage",
 							"dataBtn": "dataPage",
-							"reportBtn": "reportsPage"
+							"waitingBtn": "waitingPage",
+							"bomBtn": "bomPage",
+							"pickplaceBtn": "pickplacePage",
+							"forecastingBtn": "forecastingPage",
+							"kitsBtn": "kitsPage",
+							"convertBtn": "convertPage"
 						}
 					]
 				}
@@ -173,8 +178,13 @@
         {
             "Buttons": [
                 "homeBtn",
-                "reportBtn",
-                "dataBtn"
+                "dataBtn",
+                "waitingBtn",
+                "bomBtn",
+                "pickplaceBtn",
+                "forecastingBtn",
+                "kitsBtn",
+                "convertBtn"
             ],
             "Style":[
                     {
